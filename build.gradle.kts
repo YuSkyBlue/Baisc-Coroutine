@@ -18,6 +18,13 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+java {
+    toolchain{        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
 kotlin {
-    jvmToolchain(21)
+//    (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
+    jvmToolchain(17)
+//    jvmToolchain(21)
 }
